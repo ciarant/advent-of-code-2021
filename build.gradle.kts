@@ -1,7 +1,8 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.5.10"
+    kotlin("jvm") version "1.6.0"
+    id("io.gitlab.arturbosch.detekt").version("1.19.0")
     application
 }
 
@@ -22,6 +23,10 @@ tasks.test {
 
 tasks.withType<KotlinCompile>() {
     kotlinOptions.jvmTarget = "13"
+}
+
+detekt {
+    config = files("detekt.yml")
 }
 
 application {
