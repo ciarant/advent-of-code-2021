@@ -8,6 +8,7 @@ class Day01Test {
     val exampleInputs = listOf(
         199, 200, 208, 210, 200, 207, 240, 269, 260, 263
     );
+
     @Nested
     @DisplayName("Part 1")
     inner class Part1 {
