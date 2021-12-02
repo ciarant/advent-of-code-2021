@@ -27,7 +27,7 @@ class Day02(private val input: List<String>) { // TODO Accept a list of Pair<Str
 
     data class Submarine(val x: Int, val y: Int) {
         fun forward(amount: Int): Submarine = copy(x = x + amount, y = y)
-        fun down(amount: Int): Submarine = copy(x = x, y = y)
+        fun down(amount: Int): Submarine = copy(x = x, y = y + amount)
         fun up(amount: Int): Submarine = copy(x = x, y = y - amount)
     }
 
