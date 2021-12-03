@@ -5,7 +5,9 @@ import kotlin.test.assertEquals
 
 @DisplayName("Day 3")
 class Day03Test {
-    val exampleInputs = listOf(1, 2, 3)
+    val exampleInputs = listOf(
+        0b00100, 0b11110, 0b10110, 0b10111, 0b10101, 0b01111, 0b00111, 0b11100, 0b10000, 0b11001, 0b00010, 0b01010
+    )
 
     @Nested
     @DisplayName("Part 1")
@@ -13,13 +15,13 @@ class Day03Test {
 
         @Test
         fun `Matches example`() {
-//            assertEquals(150, Day02(exampleInputs).solvePart1())
+            assertEquals(198, Day03(exampleInputs).solvePart1())
         }
 
         @Test
         fun `Actual answer`() {
-//            val inputs = Resources.resourceAsList("day02.txt")
-//            assertEquals(2120749, Day02(inputs).solvePart1())
+            val inputs = Resources.resourceAsList("day03.txt").map { it.toInt(2) }
+            assertEquals(1025636, Day03(inputs).solvePart1())
         }
     }
 
@@ -29,13 +31,13 @@ class Day03Test {
 
         @Test
         fun `Matches example`() {
-//            assertEquals(900, Day02(exampleInputs).solvePart2())
+//            assertEquals(900, Day03(exampleInputs).solvePart2())
         }
 
         @Test
         fun `Actual answer`() {
-//            val inputs = Resources.resourceAsList("day02.txt")
-//            assertEquals(2138382217, Day02(inputs).solvePart2())
+//            val inputs = Resources.resourceAsList("day03.txt")
+//            assertEquals(2138382217, Day03(inputs).solvePart2())
         }
     }
 }
